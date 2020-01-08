@@ -13,7 +13,7 @@ def calc(s):
 try:
     browser = webdriver.Chrome()
     browser.get("http://suninjuly.github.io/explicit_wait2.html")
-    # говорим Selenium проверять в течение 5 секунд, пока цена не станет меньше или равна $100
+    # говорим Selenium проверять в течение 12 секунд, пока цена не станет меньше или равна $100
     price = WebDriverWait(browser, 12).until(
             EC.text_to_be_present_in_element((By.ID, "price"), "$100"))
     button_to_buy = browser.find_element(By.ID, "book").click()
